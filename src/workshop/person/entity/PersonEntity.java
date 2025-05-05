@@ -8,10 +8,10 @@ public class PersonEntity {
 	private String phone;
 	
 	public PersonEntity(String name, String ssn, String address, String phone) {
-		this.name = name;
+		setName(name);
 		setSsn(ssn);
-		this.address = address;
-		this.phone = phone;
+		setAddress(address);
+		setPhone(phone);
 	}
 
 	public PersonEntity() {
