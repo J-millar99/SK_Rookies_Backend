@@ -21,5 +21,4 @@ public class ReferenceBook extends Publication {
 	}
 	
 	
-
 }
