@@ -42,7 +42,7 @@ public class PersonManagerArrayList {
 		persons.add(new PersonEntity("최철수","7601211025101", "인천 계양구", "032-122-7832"));
 	}
 	
-	public int findByGender(PersonEntity[] persons, char gender) {
+	public int findByGender(List<PersonEntity> persons, char gender) {
 		int genderCnt = 0;
 		for (PersonEntity person : persons) {
 			// gender 비교
@@ -53,7 +53,7 @@ public class PersonManagerArrayList {
 		return genderCnt;
 	}
 	
-	public void showPerson(PersonEntity[] persons, String name) {
+	public void showPerson(List<PersonEntity> persons, String name) {
 		for (PersonEntity person : persons) {
 			if (person.getName().equals(name)) {
 				System.out.println("[이름] " + person.getName());
