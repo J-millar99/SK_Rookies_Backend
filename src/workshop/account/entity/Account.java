@@ -57,4 +57,15 @@ public class Account {
 		}
 		this.balance -= amount;
 	}
+
+	// 부모 클래스가 가진 Object의 toString() 메서드를 재정의(Override)
+	// Method Signature public String toString()
+	@Override
+	public String toString() {
+		return "Account "
+				+ "[custId=" + custId 
+				+ ", acctId=" + acctId 
+				+ ", balance=" + balance + "]";
+	}
+	
 }
