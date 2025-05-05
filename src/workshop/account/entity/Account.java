@@ -44,8 +44,4 @@ public class Account {
 		}
 		this.balance -= amount;
 	}
-	
-	public static void main(String[] args) {
-		
-	}
 }
