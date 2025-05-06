@@ -20,10 +20,6 @@ public class ManageBook {
 			System.out.println(publication);
 		}
 		
-		for (Publication publication : pubs) {
-			printSubInfo(publication);
-		}
-		
 		Publication pub2 = pubs[2];
 		System.out.println("=== 啊拜函版 傈 === ");
 		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
@@ -32,6 +28,9 @@ public class ManageBook {
 		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
 		modifyPrice(pub2);
 		
+		for (Publication publication : pubs) {
+			printSubInfo(publication);
+		}
 		// Magazine 按眉 积己
 		// Magazine mz = new Magazine();
 		// Novel 按眉 积己
