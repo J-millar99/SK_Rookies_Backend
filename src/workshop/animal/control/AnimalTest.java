@@ -20,7 +20,14 @@ public class AnimalTest {
 		cat1.eat();
 		cat1.walk();
 		
+		// Pet으로부터 상속받은 메서드
+		cat2.setName("미요");
+		System.out.println(cat2.getName());
+		cat2.play();
 		
+		// Animal로부터 상속받은 메서드
+		cat3.eat();
+		cat3.walk();
 	}
 
 }
