@@ -20,6 +20,10 @@ public class ManageBook {
 			System.out.println(publication);
 		}
 		
+		for (Publication publication : pubs) {
+			printSubInfo(publication);
+		}
+		
 		Publication pub2 = pubs[2];
 		System.out.println("=== 가격변경 전 === ");
 		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
@@ -36,6 +40,20 @@ public class ManageBook {
 		// 묶어서 배열에 쓰기 위해서 부모 타입으로 사용
 		// Publication pub1 = new Magazine();
 		// Publication pub2 = new Novel();
+	}
+	
+	// 하위(sub)클래스들이 단독으로 가지고 있는 정보를 출력하는 메서드
+	public static void printSubInfo(Publication pub) {
+		if (pub instanceof Magazine) {
+			Magazine m = (Magazine)pub;
+			System.out.println(m.getPublishingPeriod());
+		} else if (pub instanceof Novel) {
+			Novel n = (Novel)pub;
+			System.out.println(n.getAuthor() + " " + n.getGenre());
+		} else if (pub instanceof ReferenceBook) {
+			ReferenceBook r = (ReferenceBook)pub;
+			System.out.println(r.getField());
+		}
 	}
 	
 	// 다형적 아규먼트(Polymorphic Argument)
