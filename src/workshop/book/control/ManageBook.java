@@ -19,18 +19,27 @@ public class ManageBook {
 		for (Publication publication : pubs) {
 			System.out.println(publication);
 		}
+		
+		Publication pub2 = pubs[2];
+		System.out.println("=== 가격변경 전 === ");
+		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
+		modifyPrice(pub2);
+		System.out.println("=== 가격변경 전 === ");
+		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
+		modifyPrice(pub2);
+		
 		// Magazine 객체 생성
 		// Magazine mz = new Magazine();
 		// Novel 객체 생성
 		// Novel novel = new Novel();
 		
 		// 묶어서 배열에 쓰기 위해서 부모 타입으로 사용
-		Publication pub1 = new Magazine();
-		Publication pub2 = new Novel();
+		// Publication pub1 = new Magazine();
+		// Publication pub2 = new Novel();
 	}
 	
 	// 다형적 아규먼트(Polymorphic Argument)
-	public void modifyPrice(Publication pub) {
+	public static void modifyPrice(Publication pub) {
 		double rate = 0.0;
 		if (pub instanceof Magazine) {
 			rate = 0.6; // 40%
