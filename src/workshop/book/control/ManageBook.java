@@ -28,4 +28,19 @@ public class ManageBook {
 		Publication pub1 = new Magazine();
 		Publication pub2 = new Novel();
 	}
+	
+	// 다형적 아규먼트(Polymorphic Argument)
+	public void modifyPrice(Publication pub) {
+		double rate = 0.0;
+		if (pub instanceof Magazine) {
+			rate = 0.6; // 40%
+		} else if (pub instanceof Novel) {
+			rate = 0.8; // 20%
+		} else if (pub instanceof ReferenceBook) {
+			rate = 0.9; // 10%
+		}
+		
+		pub.setPrice((int)(pub.getPrice() * rate));
+	}
+	
 }
