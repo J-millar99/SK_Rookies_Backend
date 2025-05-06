@@ -9,7 +9,7 @@ public abstract class Animal {
 	
 	public abstract void eat();
 	
-	public void wal() {
+	public void walk() {
 		System.out.println("동물은" + legs + "발로 걷는다.");
 	}
 }
